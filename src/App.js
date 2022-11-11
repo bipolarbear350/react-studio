@@ -18,11 +18,6 @@ function App() {
   /* add your cart state code here */
 
 
-    const [counter, setCounter] = useState(0);
-    function handleClick() {
-        setCounter(counter + 1);
-    }
-
     const [finalPrice, setFinalprice] = useState(0);
     function handlePriceClick(input){
         setFinalprice(finalPrice + input)
@@ -37,9 +32,6 @@ function App() {
   return (
     <div className="App">
       <h1>My Bakery</h1> {/* TODO: personalize your bakery (if you want) */}
-
-        <p>My counter: {counter} </p>
-        <button onClick={() => handleClick()}>Click me!</button>
 
       {bakeryData.map((item, index) => ( // TODO: map bakeryData to BakeryItem components
           // <div>
